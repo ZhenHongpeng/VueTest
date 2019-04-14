@@ -10,6 +10,8 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+    h3{
+        color: red;
+    }
 </style>

@@ -33,7 +33,7 @@
         },
         methods:{
             getNewsInfo(){
-                this.$http.get('http://127.0.0.1:8080/getnewsinfo?id='+this.id).then(result =>{
+                this.$http.get('http://192.168.1.103:8080/getnewsinfo?id='+this.id).then(result =>{
 
                     if(result.status === 200){
                         this.newsinfo = result.body.message[0]

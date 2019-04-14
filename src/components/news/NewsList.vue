@@ -34,7 +34,7 @@
         },
         methods: {
             getNewsList() {
-                this.$http.get('http://127.0.0.1:8080/getnewslist').then(result => {
+                this.$http.get('http://192.168.1.103:8080/getnewslist').then(result => {
                     if (result.body.status === 0) {
                         this.newslist = result.body.message
                     } else {

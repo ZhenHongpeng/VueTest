@@ -19,17 +19,27 @@ Vue.use(VueResource);
 
 //设置请求的根路径
 // Vue.http.options.root = 'http://127.0.0.1:3000';
+//全局设置 post 时候表单数据格式形式:  application/x-www-form-urlencoded
+Vue.http.options.emulateJSON = true;
 
 //导入样式
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 
 //按需导入组件
-import { Header,Swipe, SwipeItem,Button } from 'mint-ui';
-Vue.component(Header.name, Header);
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component(Button.name, Button);
+// import { Header,Swipe, SwipeItem,Button, Lazyload } from 'mint-ui';
+// Vue.component(Header.name, Header);
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Button.name, Button);
+// Vue.use(Lazyload);
+import MintUI from 'mint-ui'
+Vue.use(MintUI);
+import 'mint-ui/lib/style.css'
+
+//安装图片预览插件
+import VuePreview from 'vue2-preview'
+Vue.use(VuePreview);
 
 
 //导入app根组件
