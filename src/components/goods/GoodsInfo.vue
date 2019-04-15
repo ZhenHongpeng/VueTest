@@ -118,7 +118,17 @@
             },
 
             addToShopCar(){
-                this.ballflag = !this.ballflag
+                this.ballflag = !this.ballflag;
+                // {id:商品的id,count:要购买的数量,price:商品的单价,selected:是否被选中(true:想要购买=>计算数量总价)}
+                var goodsinfo = {  //拼接出一个要加入到store 中 car 数组里的商品信息对象
+                    id:this.id,
+                    count:this.selectedCount,
+                    price:this.goodsInfo.sell_price,
+                    selected:true
+                };
+
+                //调用 store 中的mutations来将商品加入购物车
+                this.$store.commit('addToCar',goodsinfo)
             },
 
             beforeEnter(el){

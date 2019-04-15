@@ -12,12 +12,13 @@
 </template>
 
 <script>
-    import  mui from '../../lib/mui/js/mui.min.js'
+    import mui from '../../lib/mui/js/mui.min.js'
 
     export default {
         //初始化数字选择框
         mounted() {
             mui('.mui-numbox').numbox();
+            // mui('.mui-btn ').numbox();
 
         },
         methods: {
